@@ -2,97 +2,76 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Declaração de Amor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Meu Amor</title>
     <style>
         body {
-            background: #ffb3b3; /* vermelho bem claro */
+            background-color: #ffdddd;
             font-family: Arial, sans-serif;
+            color: white;
             text-align: center;
-            padding-top: 80px;
+            padding: 40px;
         }
-        h1 {
-            color: #ffffff; 
-            font-size: 48px;
-        }
-        p {
-            font-size: 22px;
-            color: #ffffff;
-            width: 60%;
+
+        .container {
+            max-width: 600px;
             margin: auto;
         }
-        .card {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            display: inline-block;
-            backdrop-filter: blur(5px);
-        }
+
         img {
-            margin-top: 25px;
-            width: 320px;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            margin-bottom: 25px;
         }
 
-        /* Botão fofo */
         button {
-            margin-top: 25px;
-            background: #ff4d4d;
+            background-color: #ff4d4d;
             color: white;
             border: none;
-            padding: 15px 25px;
-            font-size: 22px;
-            border-radius: 15px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 20px;
             cursor: pointer;
-            transition: 0.3s;
+            margin-top: 20px;
+            transition: 0.2s;
         }
+
         button:hover {
-            background: #ff1a1a;
-            transform: scale(1.05);
+            background-color: #ff1a1a;
         }
 
-        /* Coração escondido */
         #coracao {
+            font-size: 80px;
+            margin-top: 20px;
             display: none;
-            margin-top: 25px;
-            font-size: 60px;
-            color: white;
-            background: #ff1a1a;
-            padding: 40px 20px;
-            border-radius: 30px;
-            width: 250px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
-            animation: aparecer 0.5s ease-out forwards;
+            animation: pulsar 1s infinite;
         }
 
-        @keyframes aparecer {
-            from { opacity: 0; transform: scale(0.5); }
-            to { opacity: 1; transform: scale(1); }
+        @keyframes pulsar {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.25); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-
-    <div class="card">
-        <h1>❤️ EU TE AMO ❤️</h1>
+    <div class="container">
+        <h1>Eu te amo, meu amor ❤️</h1>
 
         <p>
-            Só queria te lembrar que você deixa tudo mais leve.
-            Você virou meu cantinho de paz, meu motivo de sorriso,
-            e a melhor parte dos meus dias.
-            <br><br>
-            Você é minha melhor escolha. Eu e Você Pra Sempre!
+            Como é bom dividir a vida contigo…  
+            Você é minha paz, minha risada fácil, meu abraço favorito.  
+            Eu te amo mais do que consigo colocar em palavras.
         </p>
 
-        <img src="foto.jpg" alt="Nossa foto">
+        <!-- FOTO NA MESMA PASTA -->
+        <img src="foto.jpg" alt="Nós dois ❤️">
 
-        <button onclick="mostrarCoracao()">Clique aqui 💖</button>
+        <!-- BOTÃO EMBAIXO DA FOTO -->
+        <button onclick="mostrarCoracao()">Clique aqui, meu amor 💕</button>
 
-        <div id="coracao">❤️<br>EU TE AMO</div>
-
+        <div id="coracao">❤️<br>eu te amo</div>
     </div>
 
     <script>
@@ -100,6 +79,5 @@
             document.getElementById("coracao").style.display = "block";
         }
     </script>
-
 </body>
 </html>
