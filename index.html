@@ -2,76 +2,108 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Meu Amor</title>
+    <title>Declaração de Amor</title>
     <style>
         body {
-            background-color: #ffdddd;
+            background: #ff8a8a;
             font-family: Arial, sans-serif;
-            color: white;
             text-align: center;
-            padding: 40px;
+            padding-top: 80px;
         }
-
-        .container {
-            max-width: 600px;
+        h1 {
+            color: #ffffff; 
+            font-size: 48px;
+        }
+        p {
+            font-size: 22px;
+            color: #ffffff;
+            width: 60%;
             margin: auto;
         }
-
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            display: inline-block;
+            backdrop-filter: blur(5px);
+        }
         img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 10px;
-            margin-bottom: 25px;
+            margin-top: 25px;
+            width: 320px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
         }
 
+        /* Botão */
         button {
-            background-color: #ff4d4d;
+            margin-top: 25px;
+            background: #ff4d4d;
             color: white;
             border: none;
-            padding: 12px 25px;
-            font-size: 18px;
-            border-radius: 20px;
+            padding: 15px 25px;
+            font-size: 22px;
+            border-radius: 15px;
             cursor: pointer;
-            margin-top: 20px;
-            transition: 0.2s;
+            transition: 0.3s;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
-
         button:hover {
-            background-color: #ff1a1a;
+            background: #ff1a1a;
+            transform: scale(1.05);
         }
 
+        /* Coração */
         #coracao {
-            font-size: 80px;
-            margin-top: 20px;
             display: none;
-            animation: pulsar 1s infinite;
+            margin-top: 25px;
+            font-size: 50px;
+            color: white;
+            background: #ff1a1a;
+            padding: 40px 20px;
+            border-radius: 30px;
+            width: 260px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            animation: batida 1.4s ease-in-out infinite;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
-        @keyframes pulsar {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.25); }
+        /* Animação tum-tum */
+        @keyframes batida {
+            0%   { transform: scale(1); }
+            10%  { transform: scale(1.25); }
+            20%  { transform: scale(1); }
+            30%  { transform: scale(1.25); }
+            40%  { transform: scale(1); }
             100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Eu te amo, meu amor ❤️</h1>
+
+    <div class="card">
+        <h1>❤️ Eu te amo ❤️</h1>
 
         <p>
-            Como é bom dividir a vida contigo…  
-            Você é minha paz, minha risada fácil, meu abraço favorito.  
-            Eu te amo mais do que consigo colocar em palavras.
+            Só queria te lembrar que você deixa tudo mais leve.
+            Você virou meu cantinho de paz, meu motivo de sorriso,
+            e a melhor parte dos meus dias.
+            <br><br>
+            Você é minha melhor escolha.<br>
+            EU E VOCÊ PRA SEMPRE!
         </p>
 
-        <!-- FOTO NA MESMA PASTA -->
-        <img src="foto.jpg" alt="Nós dois ❤️">
+        <img src="foto.jpg" alt="Nossa foto">
 
-        <!-- BOTÃO EMBAIXO DA FOTO -->
-        <button onclick="mostrarCoracao()">Clique aqui, meu amor 💕</button>
+        <button onclick="mostrarCoracao()">Clique aqui 💖</button>
 
-        <div id="coracao">❤️<br>eu te amo</div>
+        <div id="coracao">❤️<br>EU TE AMO</div>
+
     </div>
 
     <script>
@@ -79,5 +111,6 @@
             document.getElementById("coracao").style.display = "block";
         }
     </script>
+
 </body>
 </html>
